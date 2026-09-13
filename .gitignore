@@ -1,0 +1,65 @@
+# ---------------------------------------------------------------
+# Root gitignore. Covers both mobile/ (Expo) and backend/ (Flask).
+# Patterns are unanchored, so they apply at any depth in the repo.
+# ---------------------------------------------------------------
+
+# Dependencies
+node_modules/
+
+# Expo and Metro
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+.metro-health-check*
+
+# Generated native projects.
+# The team uses the managed Expo workflow, so these folders are build
+# output and are recreated by prebuild. Never commit them.
+# If the project ever moves to a bare workflow, these two lines must
+# be removed, because the native projects become real source at that point.
+ios/
+android/
+.kotlin/
+
+# Logs and debug output
+*.log
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# Environment files. Never commit real secrets.
+# Commit a .env.example instead so teammates know which keys they need.
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Signing credentials and certificates. Never commit these.
+*.jks
+*.p8
+*.p12
+*.key
+*.pem
+*.mobileprovision
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Merge conflict leftovers
+*.orig.*
+
+# Python and Flask, ready for the backend task
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+instance/
+*.db
+*.sqlite3
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
