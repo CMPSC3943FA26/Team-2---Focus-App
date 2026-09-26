@@ -32,6 +32,12 @@ function stopTimer() {
 	clearInterval(startTimer);
 }
 
+function tick() {
+	if (s > 0) {
+		s.value--;
+		window.alert("Timer has ended! Let's take a break.");
+	}
+}
 start.addEventListener('click', function() {
 	function startInterval() {
 		startTimer = setInterval(function() {
@@ -42,9 +48,6 @@ start.addEventListener('click', function() {
 })
 
 pause.addEventListener('click', function() {
-//	var h.value = 0;
-//	var m.value = 0;
-//	var s.value = 0;
 	stopTimer()
 })
 
