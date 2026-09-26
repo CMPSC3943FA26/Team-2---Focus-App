@@ -1,5 +1,5 @@
 /*JS file for setting the timer function:*/
-/* --Last updated: 09/25/2026 21:18 --*/
+/* --Last updated: 09/25/2026 23:00 --*/
 
 var start = document.getElementById('start');
 var pause = document.getElementById('pause');
@@ -47,19 +47,3 @@ reset.addEventListener('click', function() {
 	s.value = 0;
 	resetTimer()
 })
-
-let countdownInterval;
-let remainingTime = parseInt(s.value);
-timerDisplay.textContent = formatTime(remainingTime);
-countdownInterval = setInterval(() => {
-	remainingTime--;
-	if (remainingTime >= 0) {
-		timerDisplay.textContent = formatTime(remainingTime);
-	} else {
-		clearInterval(countdownInterval);
-		timerDisplay.textContent = "0:0:0";
-		alert("Timer has ended! Let's take a break.");
-		s.value = "";
-	}
-}, 1000);
-}
