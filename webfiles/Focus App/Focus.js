@@ -11,6 +11,8 @@ var s = document.getElementById('sec');
 
 var startTimer = null;
 
+let timeLeft = 0;
+
 function timer() {
 	if (h.value == 0 && m.value == 0 && s.value == 0) {
 		h.value = 0;
@@ -28,8 +30,9 @@ function timer() {
 	return;
 }
 
-function stopTimer() {
+if (timeLeft <= 0) {
 	clearInterval(startTimer);
+	alert("Timer has ended! Let's take a break.");
 }
 
 function tick() {
