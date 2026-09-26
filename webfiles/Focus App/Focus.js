@@ -11,8 +11,6 @@ var s = document.getElementById('sec');
 
 var startTimer = null;
 
-let timeLeft = parseInt(input.value)
-
 function timer() {
 	if (h.value == 0 && m.value == 0 && s.value == 0) {
 		h.value = 0;
@@ -28,11 +26,6 @@ function timer() {
 		h.value--;
 	}
 	return;
-}
-
-if (timeLeft <=0) {
-	clearInterval(startTimer);
-	alert("Timer has ended! Let's take a break.");
 }
 
 start.addEventListener('click', function() {
