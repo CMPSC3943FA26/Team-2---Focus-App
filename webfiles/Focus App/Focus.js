@@ -47,3 +47,10 @@ pause.addEventListener('click', function() {
 //	var s.value = 0;
 	stopTimer()
 })
+
+reset.addEventListener('click', function() {
+	h.value = 0;
+	m.value = 0;
+	s.value = 0;
+	resetTimer()
+})
