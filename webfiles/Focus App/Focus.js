@@ -25,9 +25,8 @@ function timer() {
 		m.value = 59;
 		h.value--;
 	}
-	alert("Timer has ended! Let's take a break.");
-	
 	return;
+	alert("Timer has ended! Let's take a break.");
 }
 
 start.addEventListener('click', function() {
