@@ -1,4 +1,5 @@
-/* --Last updated: 09/24/2026 15:18 --
+/*JS file for setting the timer function:*/
+/* --Last updated: 09/25/2026 21:18 --*/
 
 var start = document.getElementById('start');
 var pause = document.getElementById('pause');
@@ -44,52 +45,4 @@ pause.addEventListener('click', function() {
 //	var m.value = 0;
 //	var s.value = 0;
 	stopTimer()
-})
-
-/*second timer
-
-var startb = document.getElementById('startb');
-var pauseb = document.getElementById('pauseb');
-
-var hb = document.getElementById('hourb');
-var mb = document.getElementById('minb');
-var sb = document.getElementById('secb');
-
-var startTimerb = null;
-
-function timerb() {
-	if (hb.value == 0 && mb.value == 0 && sb.value == 0) {
-		hb.value = 0;
-		mb.value = 0;
-		sb.value = 0;
-	} else if (sb.value != 0) {
-		sb.value--;
-	} else if (mb.value != 0 && sb.value == 0) {
-		sb.value = 59;
-		mb.value--;
-	} else if (hb.value != 0 && mb.value == 0) {
-		mb.value = 59;
-		hb.value--;
-	}
-	return;
-}
-
-function stopTimerb() {
-	clearInterval(startTimerb);
-}
-
-startb.addEventListener('click', function() {
-	function startInterval() {
-		startTimerb = setInterval(function() {
-			timer();
-		}, 1000);
-	}
-	startInterval()
-})
-
-pauseb.addEventListener('click', function() {
-//	var hb.value = 0;
-//	var mb.value = 0;
-//	var sb.value = 0;
-	stopTimerb()
 })
