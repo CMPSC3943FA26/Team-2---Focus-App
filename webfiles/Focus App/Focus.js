@@ -11,7 +11,6 @@ var s = document.getElementById('sec');
 
 var startTimer = null;
 
-let timeLeft = 0;
 
 function timer() {
 	if (h.value == 0 && m.value == 0 && s.value == 0) {
@@ -30,17 +29,11 @@ function timer() {
 	return;
 }
 
-if (timeLeft <= 0) {
+if (s.value <= 0 && m.value <= 0 && h.value <= 0) {
 	clearInterval(startTimer);
 	alert("Timer has ended! Let's take a break.");
 }
 
-function tick() {
-	if (s > 0) {
-		s.value--;
-		window.alert("Timer has ended! Let's take a break.");
-	}
-}
 start.addEventListener('click', function() {
 	function startInterval() {
 		startTimer = setInterval(function() {
