@@ -3,6 +3,7 @@
 
 var start = document.getElementById('start');
 var pause = document.getElementById('pause');
+var restart = document.getElementById('restart');
 
 var h = document.getElementById('hour');
 var m = document.getElementById('min');

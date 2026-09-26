@@ -175,6 +175,10 @@ hr {
 	grid-area: 3 / 3 / 3 / 5;
 }
 
+#restart {
+	grid-area: 3 / 4 / 3 / 5;
+}
+
 /*Container 2 buttons: */
 #startb {
 	grid-area: 3 / 2 / 3 / 4;
