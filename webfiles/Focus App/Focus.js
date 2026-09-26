@@ -26,7 +26,6 @@ function timer() {
 		h.value--;
 	}
 	return;
-	alert("Timer has ended! Let's take a break.");
 }
 
 start.addEventListener('click', function() {
@@ -48,3 +47,13 @@ reset.addEventListener('click', function() {
 	s.value = 0;
 	resetTimer()
 })
+
+let countdownInterval;
+let remainingTime = parseInt(s.value);
+countdownInterval = setInterval(() => {
+	remainingTime--;
+	if (remainingTime <= 0) {
+		clearInterval(countdownInterval);
+		alert("Timer has ended! Let's take a break.");
+	}
+}, 1000);
