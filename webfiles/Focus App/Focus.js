@@ -50,10 +50,16 @@ reset.addEventListener('click', function() {
 
 let countdownInterval;
 let remainingTime = parseInt(s.value);
+timerDisplay.textContent = formatTime(remainingTime);
 countdownInterval = setInterval(() => {
 	remainingTime--;
-	if (remainingTime <= 0) {
+	if (remainingTime >= 0) {
+		timerDisplay.textContent = formatTime(remainingTime);
+	} else {
 		clearInterval(countdownInterval);
+		timerDisplay.textContent = "0:0:0";
 		alert("Timer has ended! Let's take a break.");
+		s.value = "";
 	}
 }, 1000);
+}
