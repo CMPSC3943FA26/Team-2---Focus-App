@@ -62,18 +62,6 @@ hr {
 	grid-template-rows: repeat(3, 1 fr);
 }
 
-#container-2 {
-	height: 200px;
-	width: 700 px;
-	background-color: #06402B;
-	margin: 0 auto;
-	border: 5px solid;
-	
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(3, 1 fr);
-}
-
 .label {
 	margin: 0;
 	justify-self: center;
@@ -134,28 +122,6 @@ hr {
 }
 
 
-/*Container 2 time: */
-#hourb {
-	grid-area: 2 / 2 / 2 / 3;
-}
-
-#p3 {
-	grid-area: 2 / 2 / 2 / 4;
-}
-
-#minb {
-	grid-area: 2 / 3 / 2 / 4;
-}
-
-#p4 {
-	grid-area: 2 / 3 / 2 / 5;
-}
-
-#secb {
-	grid-area: 2 / 4 / 2 / 5;
-}
-
-
 /*buttons: */
 .btn {
 	align-self: center;
@@ -177,14 +143,4 @@ hr {
 
 #reset {
 	grid-area: 3 / 4 / 3 / 5;
-}
-
-
-/*Container 2 buttons: */
-#startb {
-	grid-area: 3 / 2 / 3 / 4;
-}
-
-#pauseb {
-	grid-area: 3 / 3 / 3 / 5;
 }
