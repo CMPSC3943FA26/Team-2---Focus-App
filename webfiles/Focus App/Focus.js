@@ -1,5 +1,6 @@
 /*JS file for setting the timer function:*/
 /* --Last updated: 09/25/2026 23:00 --*/
+/*example of a timer function */ */
 
 var start = document.getElementById('start');
 var pause = document.getElementById('pause');
