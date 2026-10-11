@@ -25,7 +25,14 @@ h3 {
 	font-family: lucida console;
 	font-weight: 200;
 	text-align: center;
-	color: #06402B;
+	color: #292929;
+}
+h4 {
+	font-size: 40px;
+	font-family: lucida console;
+	font-weight: 400;
+	text-align: center;
+	color: #ff04ea;
 }
 
 
