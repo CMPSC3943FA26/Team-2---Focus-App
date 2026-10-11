@@ -1,69 +1,74 @@
 /* CSS- Design Portion */
 
-/* Last Updated-- 09/24/2026 14:49 -- */
+/* Last Updated-- 10/10/2026 3:01 -- */
 
 /* headers: */
 h1 {
-	font-size: 30px;
-	font-family: lucida console;
+	font-size: 50px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
 	font-weight: 400;
 	text-align: center;
+	text-shadow: 2px 1px 2px #000000;
 	text-decoration: underline;
-	color: #06402B;
+	color: #feffcd;
+	
 }
 
 h2 {
 	font-size: 25px;
-	font-family: arial;
+	font-family: Georgia, 'Times New Roman', Times, serif;
 	font-weight: 200;
 	text-align: center;
-	color: #06402B;
+	color: #000000;
 }
+
 
 h3 {
-	font-size: 40px;
-	font-family: lucida console;
+	font-size: 60px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
 	font-weight: 200;
 	text-align: center;
-	color: #292929;
+	color: #fff2cc;
+	-webkit-text-stroke: 1px #000000;
+	transform: translateY(-40px);
+	text-shadow: 2px 1px 2px #000000;
 }
-h4 {
-	font-size: 40px;
-	font-family: lucida console;
-	font-weight: 400;
-	text-align: center;
-	color: #ff04ea;
-}
-
 
 /* body or main text: */
 body {
-	background-color: #A7C7E7; /*blue or green is recommended for studying */
+	background-image: url("Images/red-mountain.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+	margin: 0;
 }
 
 p {
-	font-size: 20px;
-	font-family: arial;
-	font-weight: 50;
+	font-size: 25px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-weight: 60;
 	text-align: center;
-	color: white;
+	color: #fff0be;
+	-webkit-text-stroke: 0.3px #000000;
+	text-shadow: 2px 1px 2px #000000;
 }
 
 /* borders and lines: */
 hr {
 	border: none;
 	height: 1px;
-	background-color: #191970;
+	background-color: transparent;
 }
 
 /*containers and items pertaining to it: */
 #container-1 {
 	height: 200px;
 	width: 700 px;
-	background-color: #06402B;
+	background-color: #4605053d;
 	margin: 0 auto;
-	border: 5px solid;
-	
+	border: px solid;
+	border-color: rgba(128, 0, 0, 0.507);
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: repeat(3, 1 fr);
@@ -78,14 +83,17 @@ hr {
 
 #hour-label {
 	grid-area: 1 / 2 / 1 / 3;
+	border-radius: 10px;
 }
 
 #min-label {
 	grid-area: 1 / 3 / 1 / 4;
+	border-radius: 10px;
 }
 
 #sec-label {
 	grid-area: 1 / 4 / 1 / 5;
+	border-radius: 10px;
 }
 
 
@@ -94,22 +102,30 @@ hr {
 	justify-self: center;
 	align-self: center;
 	
-	background-color: #06402B;
+	background-color: #632828a8;
 	font-size: 50px;
 	width: 70px;
 	height: 50px;
+	color: rgb(0, 0, 0);
+	color-scheme: dark;
 }
 
 #hour {
 	grid-area: 2 / 2 / 2 / 3;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	border-radius: 10px;
+	color: #fff0be;
+	-webkit-text-stroke: 0.3px #000000;
+	border-color: #00000060;
+	border-width: 2px;
 }
 
 .semicolon {
 	justify-self: center;
 	align-self: center;
-	
 	font-size: 30px;
 	margin: 0;
+	border-radius: 10px;
 }
 
 #p1 {
@@ -118,6 +134,12 @@ hr {
 
 #min {
 	grid-area: 2 / 3 / 2 / 4;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	border-radius: 10px;
+	color: #fff0be;
+	-webkit-text-stroke: 0.3px #000000;
+	border-color: #00000060;
+	border-width: 2px;
 }
 
 #p2 {
@@ -126,6 +148,12 @@ hr {
 
 #sec {
 	grid-area: 2 / 4 / 2 / 5;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	border-radius: 10px;
+	color: #fff0be;
+	-webkit-text-stroke: 0.3px #000000;
+	border-color: #00000060;
+	border-width: 2px;
 }
 
 
@@ -135,9 +163,20 @@ hr {
 	
 	width: 100px;
 	height: 40px;
-	
+	background-color: #6b6d6d56;
 	font-size: 30px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
 	justify-self: center;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+/*buttons effect: */
+.btn:hover {
+	background-color: #2b2c2cbe;
+	color: rgb(0, 0, 0);
+	transform: translateY(-2px);
 }
 
 #start {
