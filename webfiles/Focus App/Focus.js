@@ -26,13 +26,21 @@ function timer() {
 		m.value = 59;
 		h.value--;
 	}
-	if (s.value == 0) {
+	/*if (s.value == 0) {
  		const modal = document.getElementById("session-modal");
  		modal.style.display = "block"; // Show notification
   		setTimeout(() => {
    		modal.style.display = "none"; // Hide notification after 5 seconds
-    	/*startBreakSession(); // Call your next function to start the break timer*/
-  	}, 5000); 
+    	/*startBreakSession(); // Call your next function to start the break timer
+  	}, 5000); */
+	let sessionEnded = false; // Add this globally or outside your loop
+
+// Inside your timer function:
+if (s.value == 0 && !sessionEnded) {
+  sessionEnded = true; // Set to true instantly so the next loop skips this block
+  
+  alert("Way to go! You have completed your study session. Now lets take a break...");
+}
 }
 	return;
 
