@@ -28,10 +28,10 @@ function timer() {
 	}
 	if (s.value == 0) {
  		const modal = document.getElementById("session-modal");
-		event.stopPropagation()
  		modal.style.display = "block"; // Show notification
   		setTimeout(() => {
    		modal.style.display = "none"; // Hide notification after 5 seconds
+		event.stopPropagation()
     	/*startBreakSession(); // Call your next function to start the break timer*/
   	}, 5000); 
 }
