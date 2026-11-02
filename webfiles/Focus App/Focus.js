@@ -27,7 +27,8 @@ function timer() {
 		h.value--;
 	}
 	return;
-	alert("Way to go! You have completed your study session. Now lets take a break...");
+	if(s.value == 0) setTimeout(() => 	alert("Way to go! You have completed your study session. Now lets take a break..."));
+
 }
 
 start.addEventListener('click', function() {
