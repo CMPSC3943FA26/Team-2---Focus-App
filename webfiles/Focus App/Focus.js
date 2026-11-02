@@ -58,7 +58,7 @@ reset.addEventListener('click', function() {
 	resetTimer()
 })
 
-Game
+/*Game
 const scoreEl = document.getElementById("score");
 const timeEl = document.getElementById("time");
 const bestEl = document.getElementById("best");
@@ -109,4 +109,4 @@ beginBtn.onclick = function () {
 		timeEl.textContent = time;
 		if (time <= 0) endGame();
 	}, 1000);
-}
+}*/
