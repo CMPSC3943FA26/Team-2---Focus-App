@@ -1,5 +1,5 @@
 /*JS file for setting the timer function:*/
-/* --Last updated: 09/25/2026 23:00 --*/
+/* --Last updated: 11/02/2026 14:00 --*/
 /*example of a timer function */
 
 var start = document.getElementById('start');
@@ -28,7 +28,9 @@ function timer() {
 	}
 	return;
 }
-	/*if (s.value == 0) {
+	/*
+	an alert that did pop up, but continues to glitch...
+	if (s.value == 0) {
  		const modal = document.getElementById("session-modal");
  		modal.style.display = "block"; // Show notification
   		setTimeout(() => {
