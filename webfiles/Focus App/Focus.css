@@ -191,7 +191,7 @@ hr {
 	grid-area: 3 / 4 / 3 / 5;
 }
 
-
+/*Game*/
 #score {
 	text-align: center;
 }
@@ -220,4 +220,21 @@ hr {
 	top: 175 px;
 	background-image: url("https://icon2.cleanpng.com/20180330/seq/avc42l1s5.webp")
 	background-size: cover;
+}
+
+/* Links */
+a:link {
+	color: #fff0be;
+	font-size: 18px;
+	font-weight: 150;
+}
+
+a:hover {
+	color: #fada71;
+	font-size: 18px;
+}
+
+a:visited {
+	color: #7d7b5e;
+	font-size: 18px;
 }
