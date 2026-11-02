@@ -236,7 +236,7 @@ hr {
 	height: 300px;
 	border: 2px solid black;
 	margin: auto;
-	background-image: url("https://st3.depositphotos.com/5479200/14902/v/450/depositphotos_149023447-stock-illustration-cartoon-forest-game-background-landscape.jpg")
+	background-image: './images/bg.jpg'
 	background-size: cover;
 }
 
@@ -245,7 +245,7 @@ hr {
 	width: 75px;
 	position: relative;
 	top: 225 px;
-	background-image: url("https://w7.pngwing.com/pngs/861/261/png-transparent-tyrannosaurus-pixel-art-dinosaur-yutyrannus-tyrannosaurus-fauna-isometric-graphics-in-video-games-and-pixel-art-tail.png")
+	background-image: './images/dino.png';
 	background-size: cover;
 }
 
@@ -254,7 +254,7 @@ hr {
 	width: 50px;
 	position: relative;
 	top: 175 px;
-	background-image: url("https://icon2.cleanpng.com/20180330/seq/avc42l1s5.webp")
+	background-image: './images/rock.webp';
 	background-size: cover;
 }
 
