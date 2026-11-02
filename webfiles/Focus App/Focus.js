@@ -33,35 +33,6 @@ function timer() {
    		modal.style.display = "none"; // Hide notification after 5 seconds
     	startBreakSession(); // Call your next function to start the break timer
   	}, 5000); */
-	const customAlert = document.getElementById('customAlert');
-const closeAlertBtn = document.getElementById('closeAlertBtn');
-
-// Function to trigger the custom alert
-function triggerAlert() {
-  // 1. Force remove the hidden class to display the div
-  customAlert.classList.remove('hidden');
-}
-
-// Function to close the alert
-function closeAlert() {
-  customAlert.classList.add('hidden');
-  
-  // Optional: Add any post-timer resets here (e.g., resetting UI text)
-}
-
-// Event listener to dismiss the alert when clicking the button
-closeAlertBtn.addEventListener('click', closeAlert);
-
-// Example integration inside your existing timer/countdown function
-function checkTimerEnd(timeLeft) {
-  if (timeLeft <= 0) {
-    // CRITICAL: Stop your timer loop/requestAnimationFrame logic HERE 
-    // before launching the alert to prevent multiple triggers.
-    
-    triggerAlert();
-  }
-}
-
 
 start.addEventListener('click', function() {
 	function startInterval() {
