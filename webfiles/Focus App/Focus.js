@@ -11,7 +11,6 @@ var m = document.getElementById('min');
 var s = document.getElementById('sec');
 
 var startTimer = null;
-let isAlertTriggered = false;
 
 function timer() {
 	if (h.value == 0 && m.value == 0 && s.value == 0) {
@@ -27,8 +26,6 @@ function timer() {
 		m.value = 59;
 		h.value--;
 	}
-	if (s.value == 0 && !isAlertTriggered) {
-    isAlertTriggered = true;
 	if (s.value == 0) {
  		const modal = document.getElementById("session-modal");
  		modal.style.display = "block"; // Show notification
