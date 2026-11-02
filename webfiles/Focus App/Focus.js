@@ -58,12 +58,12 @@ reset.addEventListener('click', function() {
 	resetTimer()
 })
 
-/*Game
+Game
 const scoreEl = document.getElementById("score");
 const timeEl = document.getElementById("time");
 const bestEl = document.getElementById("best");
 const target = document.getElementById("target");
-const StartBtn = document.getElementById("begin");
+const beginBtn = document.getElementById("begin");
 
 let score = 0;
 let time = 10;
@@ -86,8 +86,8 @@ target.onclick = function () {
 function endGame() {
 	clearInterval(clock);
 	target.style.display = "none";
-	StartBtn.textContent = "Play Again";
-	StartBtn.disabled = false;
+	beginBtn.textContent = "Play Again";
+	beginBtn.disabled = false;
 	if (score > best) {
 		best = score;
 		bestEl.textContent = best'
@@ -95,12 +95,12 @@ function endGame() {
 	alert("Time's up! Your score: " + score);
 }
 
-StartBtn.onclick = function () {
+beginBtn.onclick = function () {
 	score = 0;
 	time = 10;
 	scoreEl.textContent = score;
 	timeEl.textConten = time;
-	StartBtn.disabled = true;
+	beginBtn.disabled = true;
 	target.style.display = "block";
 	moveTarget();
 
@@ -109,4 +109,4 @@ StartBtn.onclick = function () {
 		timeEl.textContent = time;
 		if (time <= 0) endGame();
 	}, 1000);
-}*/
+}
