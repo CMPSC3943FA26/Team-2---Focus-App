@@ -11,9 +11,8 @@ var m = document.getElementById('min');
 var s = document.getElementById('sec');
 
 var startTimer = null;
-let isAlertTriggered = false;
 
-/*function timer() {
+function timer() {
 	if (h.value == 0 && m.value == 0 && s.value == 0) {
 		h.value = 0;
 		m.value = 0;
@@ -27,49 +26,42 @@ let isAlertTriggered = false;
 		m.value = 59;
 		h.value--;
 	}
-	if (s.value == 0) {
+	/*if (s.value == 0) {
  		const modal = document.getElementById("session-modal");
  		modal.style.display = "block"; // Show notification
   		setTimeout(() => {
    		modal.style.display = "none"; // Hide notification after 5 seconds
-    	/*startBreakSession(); // Call your next function to start the break timer
+    	startBreakSession(); // Call your next function to start the break timer
   	}, 5000); */
+	const customAlert = document.getElementById('customAlert');
+const closeAlertBtn = document.getElementById('closeAlertBtn');
 
-	function timer() {
-	// If everything is already at 0, stop changing values
-	if (h.value == 0 && m.value == 0 && s.value == 0) {
-		h.value = 0;
-		m.value = 0;
-		s.value = 0;
-	} else if (s.value != 0) {
-		s.value--;
-	} else if (m.value != 0 && s.value == 0) {
-		s.value = 59;
-		m.value--;
-	} else if (h.value != 0 && m.value == 0) {
-		m.value = 59;
-		h.value--;
-	}
-
-	// 2. CHANGED: Check for absolute zero (00:00:00) AND ensure it only runs once
-	if (h.value == 0 && m.value == 0 && s.value == 0 && !isAlertTriggered) {
-		isAlertTriggered = true; // Lock the block immediately
-		
-		const modal = document.getElementById("session-modal");
-		modal.style.display = "block"; // Show notification
-		
-		setTimeout(() => {
-			modal.style.display = "none"; // Hide notification after 5 seconds
-			/*startBreakSession(); // Call your next function to start the break timer*/
-		}, 5000); 
-	}
-
-	return;
+// Function to trigger the custom alert
+function triggerAlert() {
+  // 1. Force remove the hidden class to display the div
+  customAlert.classList.remove('hidden');
 }
-}
-	return;
 
+// Function to close the alert
+function closeAlert() {
+  customAlert.classList.add('hidden');
+  
+  // Optional: Add any post-timer resets here (e.g., resetting UI text)
 }
+
+// Event listener to dismiss the alert when clicking the button
+closeAlertBtn.addEventListener('click', closeAlert);
+
+// Example integration inside your existing timer/countdown function
+function checkTimerEnd(timeLeft) {
+  if (timeLeft <= 0) {
+    // CRITICAL: Stop your timer loop/requestAnimationFrame logic HERE 
+    // before launching the alert to prevent multiple triggers.
+    
+    triggerAlert();
+  }
+}
+
 
 start.addEventListener('click', function() {
 	function startInterval() {
