@@ -12,7 +12,7 @@ var s = document.getElementById('sec');
 
 var startTimer = null;
 
-function timer() {
+/*function timer() {
 	if (h.value == 0 && m.value == 0 && s.value == 0) {
 		h.value = 0;
 		m.value = 0;
@@ -31,9 +31,40 @@ function timer() {
  		modal.style.display = "block"; // Show notification
   		setTimeout(() => {
    		modal.style.display = "none"; // Hide notification after 5 seconds
-		timer.stopPropagation()
-    	/*startBreakSession(); // Call your next function to start the break timer*/
-  	}, 5000); 
+    	/*startBreakSession(); // Call your next function to start the break timer
+  	}, 5000); */
+
+	function timer() {
+	// If everything is already at 0, stop changing values
+	if (h.value == 0 && m.value == 0 && s.value == 0) {
+		h.value = 0;
+		m.value = 0;
+		s.value = 0;
+	} else if (s.value != 0) {
+		s.value--;
+	} else if (m.value != 0 && s.value == 0) {
+		s.value = 59;
+		m.value--;
+	} else if (h.value != 0 && m.value == 0) {
+		m.value = 59;
+		h.value--;
+	}
+
+	// 2. CHANGED: Check for absolute zero (00:00:00) AND ensure it only runs once
+	if (h.value == 0 && m.value == 0 && s.value == 0 && !isAlertTriggered) {
+		isAlertTriggered = true; // Lock the block immediately
+		
+		const modal = document.getElementById("session-modal");
+		modal.style.display = "block"; // Show notification
+		
+		setTimeout(() => {
+			modal.style.display = "none"; // Hide notification after 5 seconds
+			/*startBreakSession(); // Call your next function to start the break timer*/
+		}, 5000); 
+	}
+
+	return;
+}
 }
 	return;
 
