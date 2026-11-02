@@ -86,7 +86,8 @@ p {
 
 /* borders and lines: */
 hr {
-	border: none;
+	border-style: solid;
+	border-width: 3px;
 	height: 1px;
 	background-color: transparent;
 }
