@@ -236,7 +236,7 @@ hr {
 	height: 300px;
 	border: 2px solid black;
 	margin: auto;
-	background-image: './images/bg.jpg'
+	background-color: green;
 	background-size: cover;
 }
 
