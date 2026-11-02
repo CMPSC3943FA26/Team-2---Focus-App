@@ -255,17 +255,17 @@ hr {
 /* Links */
 a:link {
 	color: #fff0be;
-	font-size: 18px;
+	font-size: 25px;
 	font-weight: 150;
 	text-decoration: none;
 }
 
 a:hover {
 	color: #fada71;
-	font-size: 18px;
+	font-size: 30px;
 }
 
 a:visited {
 	color: #7d7b5e;
-	font-size: 18px;
+	font-size: 20px;
 }
