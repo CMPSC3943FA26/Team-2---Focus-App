@@ -27,6 +27,9 @@ function timer() {
 		h.value--;
 	}
 	if(s.value == 0) setTimeout(() => 	alert("Way to go! You have completed your study session. Now lets take a break..."));
+	setTimeout(() => {
+    alertBox.style.display = 'none';
+  }, 3000); // Hides after 3 seconds
 	return;
 
 }
