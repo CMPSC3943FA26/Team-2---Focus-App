@@ -85,6 +85,7 @@ p {
 	color: #fff0be;
 	-webkit-text-stroke: 0.3px #000000;
 	text-shadow: 2px 1px 2px #000000;
+	margin: 15px;
 }
 
 /* borders and lines: */
