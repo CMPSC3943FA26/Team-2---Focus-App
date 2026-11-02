@@ -34,6 +34,14 @@ h3 {
 	text-shadow: 2px 1px 2px #000000;
 }
 
+h4 {
+	font-size: 40px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-weight: 200;
+	text-align: center;
+	color: #fff2cc;
+}
+
 /* body or main text: */
 body {
 	background-image: url("Images/red-mountain.jpg");
