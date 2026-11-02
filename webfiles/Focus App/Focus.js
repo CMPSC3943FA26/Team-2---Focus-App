@@ -48,3 +48,28 @@ reset.addEventListener('click', function() {
 	s.value = 0;
 	resetTimer()
 })
+
+/*Game*/
+const scoreEl=document.getElementById("score");
+const timeEl=document.getElementById("time");
+const bestEl=document.getElementById("best");
+const target=document.getElementById("target");
+const StartBtn=document.getElementById("start");
+
+let score = 0;
+let time = 20;
+let best = 0;
+let timer;
+
+function moveTarget() {
+	const x = Math.floor(Math.random() * 450);
+	const y = Math.floor(Math.randon() * 300);
+	target.style.left = x + "px";
+	target.style.top = y + "px";
+}
+
+target.onclick = function () {
+	score = score + 1;
+	scoreEl.textContent = score;
+	moveTarget();
+}

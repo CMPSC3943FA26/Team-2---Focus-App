@@ -228,35 +228,24 @@ hr {
 }
 
 /*Game*/
-#score {
-	text-align: center;
-}
-#game {
-	width: 600px;
-	height: 300px;
-	border: 2px solid black;
-	margin: auto;
-	background-image: url('../Images/bg.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-#dino {
-	height: 75px;
-	width: 75px;
+#area{
 	position: relative;
-	top: 225 px;
-	background-image: url("../Images/dino.png");
-	background-size: cover;
+	width: 500px;
+	height: 350px;
+	border: 3px solid black;
+	margin: 20px auto;
 }
 
-#rock {
-	height: 50px;
+#target{
+	position: absolute;
 	width: 50px;
-	position: relative;
-	top: 175 px;
-	background-image: url("../Images/rock.webp';");
-	background-size: cover;
+	height: 50px;
+	padding: 0;
+	border-radius: 50%;
+	background: red;
+	border: none;
+	cursor: pointer;
+	display: none;
 }
 
 /* Links */
