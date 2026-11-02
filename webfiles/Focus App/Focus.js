@@ -26,6 +26,7 @@ function timer() {
 		m.value = 59;
 		h.value--;
 	}
+	alert("Way to go! You have completed your study session. Now lets take a break...");
 	return;
 }
 
