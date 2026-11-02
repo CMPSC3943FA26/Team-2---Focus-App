@@ -53,6 +53,17 @@ h5 {
 	text-shadow: 2px 1px 2px #000000;
 }
 
+h6 {
+	font-size: 30px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-weight: 200;
+	text-align: center;
+	color: #fff2cc;
+	-webkit-text-stroke: 1px #000000;
+	transform: translateY(-40px);
+	text-shadow: 2px 1px 2px #000000;
+}
+
 /* body or main text: */
 body {
 	background-image: url("Images/red-mountain.jpg");
