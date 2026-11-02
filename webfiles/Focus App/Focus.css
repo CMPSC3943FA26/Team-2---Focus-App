@@ -258,6 +258,7 @@ a:link {
 	font-size: 25px;
 	font-weight: 150;
 	text-decoration: none;
+	text-shadow: 2px 1px 2px #000000;
 }
 
 a:hover {
@@ -268,4 +269,5 @@ a:hover {
 a:visited {
 	color: #7d7b5e;
 	font-size: 20px;
+	text-shadow: 2px 1px 2px #000000;
 }
