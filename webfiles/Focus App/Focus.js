@@ -26,8 +26,8 @@ function timer() {
 		m.value = 59;
 		h.value--;
 	}
-	return;
 	if(s.value == 0) setTimeout(() => 	alert("Way to go! You have completed your study session. Now lets take a break..."));
+	return;
 
 }
 
