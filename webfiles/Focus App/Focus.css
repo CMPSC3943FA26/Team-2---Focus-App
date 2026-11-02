@@ -236,7 +236,8 @@ hr {
 	height: 300px;
 	border: 2px solid black;
 	margin: auto;
-	background-image: url(../Images/bg.jpg);
+	background-image: url("../Images/bg.jpg");
+	background-repeat: no-repeat;
 	background-size: cover;
 }
 
@@ -245,7 +246,7 @@ hr {
 	width: 75px;
 	position: relative;
 	top: 225 px;
-	background-image: './images/dino.png';
+	background-image: url("../Images/dino.png");
 	background-size: cover;
 }
 
@@ -254,7 +255,7 @@ hr {
 	width: 50px;
 	position: relative;
 	top: 175 px;
-	background-image: './images/rock.webp';
+	background-image: url("../Images/rock.webp';");
 	background-size: cover;
 }
 
