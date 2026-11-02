@@ -26,6 +26,8 @@ function timer() {
 		m.value = 59;
 		h.value--;
 	}
+	return;
+}
 	/*if (s.value == 0) {
  		const modal = document.getElementById("session-modal");
  		modal.style.display = "block"; // Show notification
