@@ -26,7 +26,7 @@ function timer() {
 		m.value = 59;
 		h.value--;
 	}
-	/*alert("Way to go! You have completed your study session. Now lets take a break...");*/
+	alert("Way to go! You have completed your study session. Now lets take a break...");
 	return;
 }
 
@@ -55,12 +55,12 @@ const scoreEl = document.getElementById("score");
 const timeEl = document.getElementById("time");
 const bestEl = document.getElementById("best");
 const target = document.getElementById("target");
-const StartBtn = document.getElementById("start");
+const StartBtn = document.getElementById("begin");
 
 let score = 0;
 let time = 10;
 let best = 0;
-let timer;
+let clock;
 
 function moveTarget() {
 	const x = Math.floor(Math.random() * 450);
@@ -76,7 +76,7 @@ target.onclick = function () {
 }
 
 function endGame() {
-	clearInterval(timer);
+	clearInterval(clock);
 	target.style.display = "none";
 	StartBtn.textContent = "Play Again";
 	StartBtn.disabled = false;
@@ -96,7 +96,7 @@ StartBtn.onclick = function () {
 	target.style.display = "block";
 	moveTarget();
 
-	timer = SetInterval (function () {
+	clock = SetInterval (function () {
 		time = time - 1;
 		timeEl.textContent = time;
 		if (time <= 0) endGame();
