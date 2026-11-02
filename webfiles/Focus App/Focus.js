@@ -28,6 +28,7 @@ function timer() {
 	}
 	if (s.value == 0) {
  		const modal = document.getElementById("session-modal");
+		event.stopPropagation()
  		modal.style.display = "block"; // Show notification
   		setTimeout(() => {
    		modal.style.display = "none"; // Hide notification after 5 seconds
