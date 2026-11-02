@@ -26,15 +26,13 @@ function timer() {
 		m.value = 59;
 		h.value--;
 	}
-	/*if(s.value == 0) setTimeout(() => alert("Way to go! You have completed your study session. Now lets take a break..."));*/
 	if (s.value == 0) {
-  const modal = document.getElementById("session-modal");
-  modal.style.display = "block"; // Show notification
-
-  setTimeout(() => {
-    modal.style.display = "none"; // Hide notification after 5 seconds
-    startBreakSession(); // Call your next function to start the break timer
-  }, 5000); 
+ 		const modal = document.getElementById("session-modal");
+ 		modal.style.display = "block"; // Show notification
+  		setTimeout(() => {
+   		modal.style.display = "none"; // Hide notification after 5 seconds
+    	/*startBreakSession(); // Call your next function to start the break timer*/
+  	}, 5000); 
 }
 	return;
 
