@@ -31,7 +31,7 @@ function timer() {
  		modal.style.display = "block"; // Show notification
   		setTimeout(() => {
    		modal.style.display = "none"; // Hide notification after 5 seconds
-		event.stopPropagation()
+		timer.stopPropagation()
     	/*startBreakSession(); // Call your next function to start the break timer*/
   	}, 5000); 
 }
