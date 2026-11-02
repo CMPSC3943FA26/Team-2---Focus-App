@@ -87,7 +87,7 @@ p {
 /* borders and lines: */
 hr {
 	border-style: solid;
-	border-width: 3px;
+	border-width: 2px;
 	border-color: black;
 	height: 2 px;
 	background-color: transparent;
