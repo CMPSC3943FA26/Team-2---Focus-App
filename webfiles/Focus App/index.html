@@ -1,94 +1,135 @@
+
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Study Break</title>
-		<!--Last Updated: 02 Novmeber 2026, 14:00-->
-		
-		<link rel="stylesheet" type="text/css" href="Focus.css">
-		<!--script type="text/javascript" src="Focus.js"></script>-->
-		
-	</head>
-	
-	<body>
-	<br>
-	<hr>
-		<h1>Welcome to Study Break</h1>
-		<p align="center">An app that makes studying easier by allocating a study/break cycle to optimize study sessions and avoid burnout.</p>
-		<p align="center">Type the amount of time you would like to study and begin. Once the timer has ended, or if you need to pause for a short break, use the links below to select a break option that works best for you.</p>
-		<p align="center">Now, lets get to <a href="#studying" style="text-decoration: underline">studying!</a> !</p>
-	<br>
-	<br>
-	<hr>
-	
-	<section id="studying">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus | Study Break</title>
+    <link rel="stylesheet" href="Focus.css">
+</head>
 
-	<br>
-	<br>
-	<h3>Study Timer</h3>
-	
-	<div id="container-1">
-		<p id="hour-label" class="label">Hours</p>
-		<p id="min-label" class="label">Minutes</p>
-		<p id="sec-label" class="label">Seconds</p>
-		<input id="hour" type="number" max="99" min="0" value="0" class="time"><p id="p1" class="semicolon">:</p>
-		<input id="min" type="number" max="60" min="0" value="0" class="time"><p id="p2" class="semicolon">:</p>
-		<input id="sec" type="number" max="60" min="0" value="0" class="time">
-		<button id="start" class="btn">Start</button>
-		<button id="pause" class="btn">Pause</button>
-		<button id="reset" class="btn">Reset</button>
-	</div>
-	</section>
+<body>
+    <div class="app-shell">
 
-	<br><br><br><br>
-	<hr>
+        <!-- Header -->
+        <header class="site-header" id="home">
+            <a class="brand" href="#home">
+                <span class="brand-icon">🌲</span>
+                <span>
+                    <strong>Focus</strong>
+                    <small>Study • Focus • Recharge</small>
+                </span>
+            </a>
 
-	<nav>
-		<h5>You are on a roll! Treat yourself to a little break by selecting one of the options below:</h5>
-			<center>
-				<a href="#breathing">I need a moment to pause and relax through guided breathing exercises...</a>
-				<br>
-				<a href="#stretching">I've been sitting too long, it't time to get up and move via stretches!</a>
-				<br>
-				<a href="#gaming">I want to have some fun and play a minigame!</a>
-			</center>
-	</nav>
+            <nav class="top-nav" aria-label="Main navigation">
+                <a href="#home">⌂ Home</a>
+                <a href="#studying">🌱 Focus</a>
+                <a href="#breaks">♡ Break</a>
+                <a href="#gaming">🎮 Game</a>
+            </nav>
+        </header>
 
-	<br>
-	<br>
+        <main>
+            <!-- Welcome + timer -->
+            <div class="hero-layout">
+                <section class="welcome-panel">
+                    <h1>Welcome to<br>Focus ♡</h1>
+                    <p>
+                        A study break app that helps you stay
+                        focused, take mindful breaks, and avoid burnout.
+                    </p>
 
-	<hr>
-	<section id="breathing">
-		<br>
-		<h5>Guided Breathing Exercises</h5>	
+                    <!-- Sleeping cat illustration goes here later -->
+                    <div class="welcome-art" aria-hidden="true"></div>
+                </section>
 
-	</section>
+                <section id="studying" class="timer-panel">
+                    <h3>⏱ Study Timer</h3>
 
-	<br>
-	<br>
+                    <div id="container-1">
+                        <p id="hour-label" class="label">Hours</p>
+                        <p id="min-label" class="label">Minutes</p>
+                        <p id="sec-label" class="label">Seconds</p>
 
-	<hr>
-	<section id="stretching">	
-		<br>
-		<h5>Move with Stretching</h5>
-		<center>to add in video: find video, click share, click "embed", copy code and paste here. Change width and height to 560x315</center>
-	</section>
+                        <input id="hour" type="number"
+                               min="0" max="99" value="0"
+                               class="time" aria-label="Hours">
 
-	<br>
-	<br>
+                        <p id="p1" class="semicolon">:</p>
 
-	<hr>
-	<section id="gaming">
-		<h5>Click the Target</h5>
-		<p>Score: <span id="score">0</span> | Time: <span id="time">10</span> | Best: <span id="best">0</span></p>
-		<button id="begin">Begin</button>
-		<div id="area"><button id="target"></button></div>
-<br>	
-	
-	</section>
+                        <input id="min" type="number"
+                               min="0" max="59" value="0"
+                               class="time" aria-label="Minutes">
 
-	<hr>
-	<script type="text/javascript" src="Focus.js"></script>
-	</body>
+                        <p id="p2" class="semicolon">:</p>
+
+                        <input id="sec" type="number"
+                               min="0" max="59" value="0"
+                               class="time" aria-label="Seconds">
+
+                        <button id="start" class="btn">▶ Start</button>
+                        <button id="pause" class="btn">Ⅱ Pause</button>
+                        <button id="reset" class="btn">↻ Reset</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Break activity cards -->
+            <section id="breaks" class="break-section">
+                <h2>Take a little break 🌿</h2>
+
+                <div class="activity-grid">
+                    <a class="activity-card breathing-card" href="#breathing">
+                        <h4>🌱 Breathing</h4>
+                        <p>Reset your mind with guided breathing.</p>
+                        <div class="activity-art breathing-art"
+                             aria-hidden="true"></div>
+                    </a>
+
+                    <a class="activity-card stretching-card" href="#stretching">
+                        <h4>🧘 Stretching</h4>
+                        <p>Loosen up and refresh your body.</p>
+                        <div class="activity-art stretching-art"
+                             aria-hidden="true"></div>
+                    </a>
+
+                    <a class="activity-card gaming-card" href="#gaming">
+                        <h4>🎮 Mini Game</h4>
+                        <p>Take a short, fun brain break!</p>
+                        <div class="activity-art gaming-art"
+                             aria-hidden="true"></div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Existing activity sections -->
+            <section id="breathing" class="activity-detail">
+                <h2>Guided Breathing Exercises</h2>
+                <p>Take a moment to slow down and breathe.</p>
+            </section>
+
+            <section id="stretching" class="activity-detail">
+                <h2>Move with Stretching</h2>
+                <p>Stretch and recharge before your next study session.</p>
+            </section>
+
+            <section id="gaming" class="activity-detail">
+                <h2>Click the Target 🎮</h2>
+
+                <p class="game-stats">
+                    Score: <span id="score">0</span> |
+                    Time: <span id="time">10</span> |
+                    Best: <span id="best">0</span>
+                </p>
+
+                <button id="begin">Begin</button>
+                <div id="area">
+                    <button id="target" aria-label="Click target"></button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="Focus.js"></script>
+</body>
 </html>
-	
-	
