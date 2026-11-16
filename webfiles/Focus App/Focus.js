@@ -55,7 +55,6 @@ reset.addEventListener('click', function() {
 	h.value = 0;
 	m.value = 0;
 	s.value = 0;
-	resetTimer()
 })
 
 /*Game
