@@ -48,7 +48,7 @@ start.addEventListener('click', function() {
 })
 
 pause.addEventListener('click', function() {
-	stopTimer()
+	clearInterval(startTimer();
 })
 
 reset.addEventListener('click', function() {
