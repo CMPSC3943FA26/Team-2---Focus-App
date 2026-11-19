@@ -1,5 +1,9 @@
 /*JS file for setting the timer function:*/
+<<<<<<< HEAD
 /* --Last updated: 09/25/2026 23:00 --*/
+=======
+/* --Last updated: 11/02/2026 14:00 --*/
+>>>>>>> 5188b5f914cbdd56f8aa93129db9e6459c83a908
 /*example of a timer function */
 
 var start = document.getElementById('start');
@@ -28,6 +32,15 @@ function timer() {
 	}
 	return;
 }
+	/*
+	an alert that did pop up, but continues to glitch...
+	if (s.value == 0) {
+ 		const modal = document.getElementById("session-modal");
+ 		modal.style.display = "block"; // Show notification
+  		setTimeout(() => {
+   		modal.style.display = "none"; // Hide notification after 5 seconds
+    	startBreakSession(); // Call your next function to start the break timer
+  	}, 5000); */
 
 start.addEventListener('click', function() {
 	clearInterval(startTimer);
@@ -35,12 +48,73 @@ start.addEventListener('click', function() {
 })
 
 pause.addEventListener('click', function() {
+<<<<<<< HEAD
 	clearInterval(startTimer);
+=======
+	clearInterval(startTimer();
+>>>>>>> 5188b5f914cbdd56f8aa93129db9e6459c83a908
 })
 
 reset.addEventListener('click', function() {
 	h.value = 0;
 	m.value = 0;
 	s.value = 0;
+<<<<<<< HEAD
 	clearInterval(startTimer);
 })
+=======
+})
+
+/*Game
+const scoreEl = document.getElementById("score");
+const timeEl = document.getElementById("time");
+const bestEl = document.getElementById("best");
+const target = document.getElementById("target");
+const beginBtn = document.getElementById("begin");
+
+let score = 0;
+let time = 10;
+let best = 0;
+let clock;
+
+function moveTarget() {
+	const x = Math.floor(Math.random() * 450);
+	const y = Math.floor(Math.randon() * 300);
+	target.style.left = x + "px";
+	target.style.top = y + "px";
+}
+
+target.onclick = function () {
+	score = score + 1;
+	scoreEl.textContent = score;
+	moveTarget();
+}
+
+function endGame() {
+	clearInterval(clock);
+	target.style.display = "none";
+	beginBtn.textContent = "Play Again";
+	beginBtn.disabled = false;
+	if (score > best) {
+		best = score;
+		bestEl.textContent = best'
+	}
+	alert("Time's up! Your score: " + score);
+}
+
+beginBtn.onclick = function () {
+	score = 0;
+	time = 10;
+	scoreEl.textContent = score;
+	timeEl.textConten = time;
+	beginBtn.disabled = true;
+	target.style.display = "block";
+	moveTarget();
+
+	clock = SetInterval (function () {
+		time = time - 1;
+		timeEl.textContent = time;
+		if (time <= 0) endGame();
+	}, 1000);
+}*/
+>>>>>>> 5188b5f914cbdd56f8aa93129db9e6459c83a908
