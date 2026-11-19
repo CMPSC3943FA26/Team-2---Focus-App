@@ -1,6 +1,6 @@
 /*JS file for setting the timer function:*/
 /* --Last updated: 09/25/2026 23:00 --*/
-/*example of a timer function */ */
+/*example of a timer function */
 
 var start = document.getElementById('start');
 var pause = document.getElementById('pause');
@@ -30,21 +30,17 @@ function timer() {
 }
 
 start.addEventListener('click', function() {
-	function startInterval() {
-		startTimer = setInterval(function() {
-			timer();
-		}, 1000);
-	}
-	startInterval()
+	clearInterval(startTimer);
+	startTimer = setInterval(timer, 1000);
 })
 
 pause.addEventListener('click', function() {
-	stopTimer()
+	clearInterval(startTimer);
 })
 
 reset.addEventListener('click', function() {
 	h.value = 0;
 	m.value = 0;
 	s.value = 0;
-	resetTimer()
+	clearInterval(startTimer);
 })
