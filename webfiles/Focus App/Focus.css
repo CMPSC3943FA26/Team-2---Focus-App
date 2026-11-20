@@ -540,7 +540,7 @@ body {
   text-align: center;
 }
 
-#snake-restart-btn {
+#snake-start-btn {
   margin-top: 10px;
   padding: 8px 16px;
   font-size: 14px;
@@ -550,9 +550,9 @@ body {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  display: none;
+  display: inline-block;
 }
 
-#snake-restart-btn:hover {
+#snake-start-btn:hover {
   background-color: #94e2d5;
 }
