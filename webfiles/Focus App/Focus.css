@@ -540,6 +540,29 @@ body {
   text-align: center;
 }
 
+#snake-action-bar {
+  display: flex;
+  gap: 10px;	
+  margin-top: 12px;
+  align-items: center;
+}
+
+#snake-speed-select {
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff
+  background-color: #313244;
+  border: 1px solid #45475a;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#snake-speed-select:focus {
+  outline: none;
+  border-color: #a6e3a1;
+}
+
 #snake-start-btn {
   margin-top: 10px;
   padding: 8px 16px;

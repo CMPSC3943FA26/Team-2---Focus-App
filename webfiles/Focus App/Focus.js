@@ -43,8 +43,9 @@ reset.addEventListener('click', function() {
 	h.value = 0;
 	m.value = 0;
 	s.value = 0;
-	/*resetTimer();*/
 })
+
+/* Snake Game JS */
 
 document.addEventListener("DOMContentLoaded", function () {
   const canvas = document.getElementById("snake-canvas");
@@ -54,6 +55,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const ctx = canvas.getContext("2d");
   const scoreEl = document.getElementById("snake-score");
   const highScoreEl = document.getElementById("snake-high-score");
+  const actionBar = document.getElementById("snake-action-bar");
+  const speedSelect = document.getElementById("snake-speed-select");
   const startBtn = document.getElementById("snake-start-btn");
 
   const gridSize = 20;
@@ -99,11 +102,14 @@ document.addEventListener("DOMContentLoaded", function () {
     isGameOver = false;
     isGameRunning = true;
     scoreEl.textContent = score;
-    startBtn.style.display = "none";
+	actionBar.style.display = "none";
+    /*startBtn.style.display = "none";*/
     spawnFood();
 
+	const selectSpeed = Number(speedSelect.value);
+
     if (gameLoop) clearInterval(gameLoop);
-    gameLoop = setInterval(update, 100);
+    gameLoop = setInterval(update, selectSpeed); /*chnaged from 100 */
   }
 
   function update() {
@@ -199,7 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ctx.fillText("Final Score: " + score, canvas.width / 2, canvas.height / 2 + 20);
 
     startBtn.textContent = "Play Again";
-    startBtn.style.display = "inline-block";
+    actionBar.style.display = "flex";
   }
 
   // Arrow keys only
