@@ -7,7 +7,7 @@
 .music-player {
 	position: fixed;
 	top: 20px;
-	right: 20px;
+	align-content: center;
 	z-index: 1000;
 	width: 100px;
 	height: 100px;
