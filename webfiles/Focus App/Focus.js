@@ -45,6 +45,21 @@ reset.addEventListener('click', function() {
 	s.value = 0;
 })
 
+/* Alert box for the timer function */
+const alertBox = document.getElementById('alert-box');
+const closeBtn = document.getElementById('close-btn');
+let alertShown = false;
+
+function triggerAlert() {
+	if (alertShown) return;
+	alertShown = true;
+	alertBox.style.display = "flex";
+}
+
+closeBtn.addEventListener('click', function() {
+	alertBox.style.display = "none";
+});
+
 /* Snake Game JS */
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -273,6 +273,32 @@ a:hover {
     justify-self: center;
 }
 
+/*Alert box for timer function */
+.alert-box {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #ffffff;
+	border: 2px solid #214a36;
+	border-radius: 12px;
+	padding: 20px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+	z-index: 1000;
+}
+
+.close-btn {
+	display: block;
+	margin: 15px auto 0;
+	padding: 8px 16px;
+	border: none;
+	border-radius: 6px;
+	background-color: #214a36;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+}
 /* Activity cards */
 .break-section {
     margin: 20px 0 60px;
