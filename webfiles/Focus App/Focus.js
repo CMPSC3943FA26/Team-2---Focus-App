@@ -1,5 +1,5 @@
 /*JS file for setting the timer function:*/
-/* --Last updated: 11/02/2026 14:00 --*/
+/* --Last updated: 11/19/2026 23:48 --*/
 /*example of a timer function */
 
 var start = document.getElementById('start');
@@ -29,7 +29,6 @@ function timer() {
 	return;
 }
 
-
 start.addEventListener('click', function() {
 	clearInterval(startTimer);
 	startTimer = setInterval(timer, 1000);
@@ -46,7 +45,7 @@ reset.addEventListener('click', function() {
 })
 
 
-/* Snake Game JS */
+/* ===== Snake Game ===== */
 
 document.addEventListener("DOMContentLoaded", function () {
   const canvas = document.getElementById("snake-canvas");
@@ -110,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const selectSpeed = Number(speedSelect.value);
 
     if (gameLoop) clearInterval(gameLoop);
-    gameLoop = setInterval(update, selectSpeed); /*chnaged from 100 */
+    gameLoop = setInterval(update, selectSpeed);
   }
 
 

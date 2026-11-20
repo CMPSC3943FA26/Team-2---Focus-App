@@ -1,6 +1,7 @@
 
 /* Nature Calm — Focus App */
 /* UI redesign: Eva */
+/* Last updated: 2026-11-19 by Chasey -- Added in Game Design */
 
 :root {
     --forest: #285d43;
@@ -363,39 +364,6 @@ a:hover {
     margin-top: 0;
 }
 
-#begin {
-    display: block;
-    margin: 15px auto;
-    padding: 12px 28px;
-    border: none;
-    border-radius: 25px;
-    background: #327a53;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-#area {
-    position: relative;
-    width: min(100%, 500px);
-    height: 350px;
-    margin: 20px auto;
-    border: 2px solid #a9cdb7;
-    border-radius: 18px;
-    background: #f2faf2;
-    overflow: hidden;
-}
-
-#target {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border: none;
-    border-radius: 50%;
-    background: #f3a8a0;
-    cursor: pointer;
-    display: none;
-}
 
 /* Smaller screens */
 @media (max-width: 800px) {
@@ -502,6 +470,9 @@ body {
 .brand-icon {
     font-size: 40px;
 }
+
+
+/* ===== Snake Game  ===== */
 
 #snake-game-widget {
   display: flex;
