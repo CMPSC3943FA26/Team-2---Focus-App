@@ -3,6 +3,19 @@
 /* UI redesign: Eva */
 /* Last updated: 2026-11-19 by Chasey -- Added in Game Design */
 
+
+.music-player {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	z-index: 1000;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 4px 12px rgba(33, 74, 54, 0.2);
+}
+
 :root {
     --forest: #285d43;
     --dark-green: #214a36;
