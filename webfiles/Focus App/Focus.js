@@ -1,9 +1,5 @@
 /*JS file for setting the timer function:*/
-<<<<<<< HEAD
-/* --Last updated: 09/25/2026 23:00 --*/
-=======
 /* --Last updated: 11/02/2026 14:00 --*/
->>>>>>> 5188b5f914cbdd56f8aa93129db9e6459c83a908
 /*example of a timer function */
 
 var start = document.getElementById('start');
@@ -48,22 +44,16 @@ start.addEventListener('click', function() {
 })
 
 pause.addEventListener('click', function() {
-<<<<<<< HEAD
-	clearInterval(startTimer);
-=======
-	clearInterval(startTimer();
->>>>>>> 5188b5f914cbdd56f8aa93129db9e6459c83a908
+	clearInterval(startTimer());
 })
 
 reset.addEventListener('click', function() {
 	h.value = 0;
 	m.value = 0;
 	s.value = 0;
-<<<<<<< HEAD
-	clearInterval(startTimer);
+	resetTimer();
 })
-=======
-})
+
 
 /*Game
 const scoreEl = document.getElementById("score");
@@ -117,4 +107,3 @@ beginBtn.onclick = function () {
 		if (time <= 0) endGame();
 	}, 1000);
 }*/
->>>>>>> 5188b5f914cbdd56f8aa93129db9e6459c83a908
