@@ -54,32 +54,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const ctx = canvas.getContext("2d");
   const scoreEl = document.getElementById("snake-score");
-  const clockEl = document.getElementById("snake-clock");
+  const highScoreEl = document.getElementById("snake-high-score");
   const actionBar = document.getElementById("snake-action-bar");
   const speedSelect = document.getElementById("snake-speed-select");
   const startBtn = document.getElementById("snake-start-btn");
 
   const gridSize = 20;
   const tileCount = canvas.width / gridSize;
-  const GameDuration = 150; // Game duration in seconds
 
   let snake = [];
   let food = { x: 15, y: 15 };
   let dx = 0;
   let dy = 0;
   let score = 0;
-  let clockRemaining = GameDuration;
+  let highScore = localStorage.getItem("snakeHighScore") || 0;
   let gameLoop;
-  let clockLoop
   let isGameOver = false;
   let isGameRunning = false;
   let changingDirection = false;
 
-  function formatClock(seconds) {
-	const mins = Math.floor(seconds / 60);
-	const secs = seconds % 60;
-	return `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
-  }
+  highScoreEl.textContent = highScore;
+
 
   // Render initial start screen
   function drawStartScreen() {
@@ -105,32 +100,18 @@ document.addEventListener("DOMContentLoaded", function () {
     dx = 1;
     dy = 0;
     score = 0;
-	clockRemaining = GameDuration;
     isGameOver = false;
     isGameRunning = true;
-	
     scoreEl.textContent = score;
-	clockEl.textContent = formatClock(clockRemaining);
 	actionBar.style.display = "none";
     spawnFood();
 
 	const selectSpeed = Number(speedSelect.value);
 
     if (gameLoop) clearInterval(gameLoop);
-	if (clockLoop) clearInterval(clockLoop);
-
     gameLoop = setInterval(update, selectSpeed); /*chnaged from 100 */
-	clockLoop = setInterval(updateClock, 1000);
   }
 
-  function updateClock() {
-	if (isGameOver || !isGameRunning) return;
-	clockRemaining--;
-	clockEl.textContent = formatClock(clockRemaining);
-	if (clockRemaining <= 0) {
-	  endGame("Time's up!");
-	}
-  }
 
   function update() {
     if (isGameOver || !isGameRunning) return;
@@ -154,10 +135,10 @@ document.addEventListener("DOMContentLoaded", function () {
     if (head.x === food.x && head.y === food.y) {
       score += 10;
       scoreEl.textContent = score;
-      /*if (score > highScore) {
+      if (score > highScore) {
         highScore = score;
         highScoreEl.textContent = highScore;
-        localStorage.setItem("snakeHighScore", highScore);*/
+        localStorage.setItem("snakeHighScore", highScore);
       }
       spawnFood();
     } else {
@@ -211,7 +192,6 @@ document.addEventListener("DOMContentLoaded", function () {
     isGameOver = true;
     isGameRunning = false;
     clearInterval(gameLoop);
-	clearInterval(clockLoop);
 
     ctx.fillStyle = "rgba(17, 17, 27, 0.75)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
